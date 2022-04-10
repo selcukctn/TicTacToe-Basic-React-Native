@@ -22,7 +22,7 @@ const HomePage = ({navigation}) => {
         }
         else{
             if(active=='X'){
-                setActive('O');
+                setActive('X');
                 setFlag(1);
                 navigation.navigate('Game',{active});
             }
