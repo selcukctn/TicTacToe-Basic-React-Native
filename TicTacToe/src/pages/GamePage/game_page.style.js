@@ -5,12 +5,15 @@ const {width, height} = Dimensions.get('window');
 export default StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:'#F7F5F2'
+        backgroundColor:'#F7F5F2',
+        justifyContent:'center',
+        alignItems:'center',
     },
     header:{
         width:width,
         justifyContent:'center',
         alignItems:'center',
+        top:-height/13
     },
     header_title_x:{
         fontSize:30,
@@ -19,5 +22,145 @@ export default StyleSheet.create({
     header_title_o:{
         fontSize:30,
         color:'#F55353',
+    },
+    x:{
+        fontSize:width/4,
+        color:'#06113C'
+    },
+    o:{
+        fontSize:width/4,
+        color:'#F24A72'
+    },
+    main_container:{
+        flexDirection:'row',
+        justifyContent:'center',
+        flexWrap:'wrap',
+    },
+    cell:{
+        width:width/3,
+        height:width/3,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        borderWidth:6,
+        borderColor:'#1A1A40'
+    },
+    top_mid_cell:{
+        width:width/3,
+        height:width/3,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        borderBottomWidth:6,
+        borderRightWidth:6,
+        borderLeftWidth:6,
+        borderColor:'#1A1A40'
+    },
+    top_left_cell:{
+        width:width/3,
+        height:width/3,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        borderBottomWidth:6,
+        borderRightWidth:6,
+        borderColor:'#1A1A40'
+    },
+    top_right_cell:{
+        width:width/3,
+        height:width/3,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        borderBottomWidth:6,
+        borderLeftWidth:6,
+        borderColor:'#1A1A40'
+    },
+    mid_left_cell:{
+        width:width/3,
+        height:width/3,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        borderBottomWidth:6,
+        borderTopWidth:6,
+        borderRightWidth:6,
+        borderColor:'#1A1A40'
+    },
+    mid_right_cell:{
+        width:width/3,
+        height:width/3,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        borderBottomWidth:6,
+        borderTopWidth:6,
+        borderLeftWidth:6,
+        borderColor:'#1A1A40'
+    },
+    bot_right_cell:{
+        width:width/3,
+        height:width/3,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        borderTopWidth:6,
+        borderLeftWidth:6,
+        borderColor:'#1A1A40'
+    },
+    bot_left_cell:{
+        width:width/3,
+        height:width/3,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        borderTopWidth:6,
+        borderRightWidth:6,
+        borderColor:'#1A1A40'
+    },
+    bot_mid_cell:{
+        width:width/3,
+        height:width/3,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        borderTopWidth:6,
+        borderRightWidth:6,
+        borderLeftWidth:6,
+        borderColor:'#1A1A40'
+    },
+    img_x:{
+        width:60,
+        height:60,
+        tintColor:'#06113C',
+    },
+    img_o:{
+        width:60,
+        height:60,
+        tintColor:'#F24A72',
+    },
+    replay: {
+        position: 'absolute',
+        bottom:40,
+        right:20,
+    },
+    replay_icon: {
+        height: 60,
+        width: 60,
+        tintColor:'#FC4F4F'
+    },
+    goback: {
+        position: 'absolute',
+        bottom:40,
+        left:20,
     },
 });

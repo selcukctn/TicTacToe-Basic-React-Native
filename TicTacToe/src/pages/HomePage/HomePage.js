@@ -8,21 +8,31 @@ const HomePage = ({navigation}) => {
     const [active,setActive] = useState('X');
     const [flag,setFlag] = useState(0);
     function isActive(){
-        if(active=='X' && flag!=1){
-            setActive('O');
-            setFlag(1);
-            navigation.navigate('Game',{active});
-        }
-        else if(active=='O'){
-            setActive('O');
-            setFlag(1);
-            navigation.navigate('Game',{active});
+        if(flag!=1){
+            if(active=='X'){
+                setActive('X');
+                setFlag(1);
+                navigation.navigate('Game',{active});
+            }
+            else if(active=='O'){
+                setActive('O');
+                setFlag(1);
+                navigation.navigate('Game',{active});
+            }
         }
         else{
-            setActive('X');
-            setFlag(1);
-            navigation.navigate('Game',{active});
+            if(active=='X'){
+                setActive('O');
+                setFlag(1);
+                navigation.navigate('Game',{active});
+            }
+            else if(active=='O'){
+                setActive('O');
+                setFlag(1);
+                navigation.navigate('Game',{active});
+            }
         }
+
     }
     return(
         <SafeAreaView style={styles.container}>
