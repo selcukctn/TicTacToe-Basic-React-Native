@@ -54,7 +54,18 @@ const GamePage = (props) => {
       }
       return null;
     }
-  
+    const checkDraw = (array) => {
+        let flag=0
+        for(let i = 0; i < array.length; i++){
+            if(array[i]!=null){
+                flag=flag+1;
+            }
+        }
+        if(flag==9)
+            return 1
+        else
+            return null
+    }
     useEffect(() => {
       const winner = calculateWinner(marker);
       if(winner === 'X'){
@@ -63,6 +74,12 @@ const GamePage = (props) => {
       }else if(winner === 'O'){
         alert("Player O Won!")
         resetMarker()
+      }else{
+          const draw = checkDraw(marker);
+          if(draw === 1){
+            alert("Draw!")
+            resetMarker()
+          }
       }
     }, [marker])
     return(
